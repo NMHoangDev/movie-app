@@ -5,6 +5,8 @@ import "./MovieSection.style.css";
 import CinematicSection from "../CinematicSection/CinematicSection";
 import TopMoviesList from "../TopMoviesList/TopMoviesList";
 
+import UpcomingSection from "../UpcomingSection/UpcomingSection";
+import AnimeShowcase from "../AnimeShowcase/AnimeShowcase";
 
 const MovieSection = () => {
   return (
@@ -16,23 +18,23 @@ const MovieSection = () => {
           isRedirect={true}
         />
 
-        <TopMoviesList 
-            title="Top 10 phim bộ hôm nay"
-            showAllRanks={true}
-            isRedirect={true}
-            onRedirect={() => console.log('Redirect clicked!')}
-        />
-
-        <CinematicSection 
+        <TopMoviesList
+          title="Top 10 phim bộ hôm nay"
+          showAllRanks={true}
           isRedirect={true}
-          onRedirect={() => console.log('CinematicSection redirect clicked!')}
+          onRedirect={() => console.log("Redirect clicked!")}
         />
 
-        <TopMoviesList 
-            title="Top 10 phim bộ hôm nay"
-            showAllRanks={false}
-            isRedirect={true}
-            onRedirect={() => console.log('Redirect clicked!')}
+        <CinematicSection
+          isRedirect={true}
+          onRedirect={() => console.log("CinematicSection redirect clicked!")}
+        />
+
+        <TopMoviesList
+          title="Top 10 phim bộ hôm nay"
+          showAllRanks={false}
+          isRedirect={true}
+          onRedirect={() => console.log("Redirect clicked!")}
         />
 
         <MovieList
@@ -46,6 +48,8 @@ const MovieSection = () => {
           data={sampleMoviesData}
           isRedirect={true}
         />
+        <UpcomingSection />
+        <AnimeShowcase />
 
         <MovieList
           title="Điện Ảnh Hồng Kông ở Chỗ Này Này"

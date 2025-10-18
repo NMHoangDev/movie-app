@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import "./styles/CategorySection.style.css";
 import CategoryMovieCard from "./CategoryMovieCard";
+import thoivangson from "../../../assets/image/thoivangson.png";
 
 const CategorySection = ({
   title = "Phim Hàn Quốc mới",
@@ -75,10 +76,5 @@ const FAKE_ITEMS = Array.from({ length: 5 }).map((_, i) => ({
   id: `m-${i + 1}`,
   title: "Thời Vàng Son",
   subtitle: "Our Golden Days",
-  poster: [
-    "https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?w=800&q=80&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=800&q=80&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1497032205916-ac775f0649ae?w=800&q=80&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1456926631375-92c8ce872def?w=800&q=80&auto=format&fit=crop",
-  ][i % 4],
+  poster: [thoivangson, thoivangson, thoivangson, thoivangson][i % 4],
 }));

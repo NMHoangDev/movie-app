@@ -44,7 +44,8 @@ const CommentListBlock = ({ type }) => {
       avatar: avatar,
       username: "Lý Kỳ Kỳ",
       gender: "male",
-      comment: "xem lại nhớ vụ ecopark ở văn giang ngày xưa quá",
+      comment:
+        "T thề là coi phim nào t cũng xem tua, chỉ duy nhất phim này t không...",
       reference: "Thời Vàng Son",
     },
     {
@@ -52,14 +53,15 @@ const CommentListBlock = ({ type }) => {
       username: "Lý Kỳ Nhung",
       gender: "male",
       comment: "xem lại nhớ vụ ecopark ở văn giang ngày xưa quá",
-      reference: "Thời Vàng Son",
+      reference: "Tôi nằm mộng giữa ban ngày",
     },
     {
       avatar: avatar,
       username: "Lý Nhã Nhã",
       gender: "male",
-      comment: "xem lại nhớ vụ ecopark ở văn giang ngày xưa quá",
-      reference: "Thời Vàng Son",
+      comment:
+        "T thề là coi phim nào t cũng xem tua, chỉ duy nhất phim này t không",
+      reference: "Tôi nằm mộng giữa ban ngày",
     },
   ];
 

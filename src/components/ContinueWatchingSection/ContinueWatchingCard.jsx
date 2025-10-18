@@ -26,21 +26,18 @@ const ContinueWatchingCard = ({
         </button>
       </div>
 
-      {/* progress */}
       <div className="continue-card__progress">
         <div
           className="continue-card__progress-bar"
           style={{ width: `${pct}%` }}
         />
       </div>
-      {/* thời lượng */}
       <div className="continue-card__meta">
         <span className="continue-card__time">
           {current} / {total}
         </span>
       </div>
 
-      {/* tiêu đề + provider */}
       <h3 className="continue-card__title" title={title}>
         {title}
       </h3>

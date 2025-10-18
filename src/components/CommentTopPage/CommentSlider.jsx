@@ -11,9 +11,7 @@ const CommentSlider = () => {
     <div className="comment-slider">
       <div className="comment-slider__track">
         {fakeImages.map((item) => (
-          <div className="comment-slider__item" key={item.id}>
-            <img src={item.img} alt="poster" className="comment-slider__img" />
-          </div>
+          <div className="comment-slider__item" key={item.id}></div>
         ))}
       </div>
     </div>
