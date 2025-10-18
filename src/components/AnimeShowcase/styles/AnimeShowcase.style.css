@@ -75,7 +75,8 @@
 
 .anime-showcase__subtitle-en {
     font-size: 14px;
-    color: #cbd5e1;
+    color: #FFD875;
+
     margin-bottom: 12px;
 }
 
@@ -86,10 +87,51 @@
     margin-bottom: 10px;
 }
 
+.anime-showcase__imdb {
+    border: 1px solid #F0D25C;
+    width: 58.3121337890625;
+    height: 26;
+    angle: 0 deg;
+    opacity: 1;
+    top: 6826.96px;
+    left: 110px;
+    border-radius: 4px;
+    border-width: 1px;
+    padding: 6px
+}
+
+.anime-showcase__imdb-text {
+    font-size: 13px;
+    color: #F0D25C;
+}
+
 .anime-showcase__badge {
-    background: #2d3748;
+    background: #FFFFFF;
+
+    color: #000;
     padding: 2px 8px;
+    padding-top: 8px;
     border-radius: 6px;
+    font-family: Inter;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 12px;
+    letter-spacing: 0%;
+
+}
+
+.anime-showcase__time {
+    border: 1px solid #FFFFFF;
+    width: 41;
+    height: 26;
+    angle: 0 deg;
+    opacity: 1;
+    top: 6826.96px;
+    left: 225.31px;
+    border-radius: 4px;
+    border-width: 1px;
+    padding: 6px;
+
 }
 
 .anime-showcase__tags {

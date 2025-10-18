@@ -16,7 +16,7 @@
 
 .comment-slider__track {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     align-items: center;
     width: 100%;
     padding: 0;
@@ -31,6 +31,7 @@
     overflow: hidden;
     background: rgba(145, 145, 145, 1);
     margin: 0;
+    justify-content: space-around;
 }
 
 .comment-slider__img {
@@ -51,11 +52,11 @@
         margin: 0 14px;
         padding: 14px 0 8px 0;
     }
-    
+
     .comment-slider__track {
         gap: 14px;
     }
-    
+
     .comment-slider__item {
         width: 180px;
         height: 180px;
@@ -68,11 +69,11 @@
         margin: 0 12px;
         padding: 12px 0 8px 0;
     }
-    
+
     .comment-slider__track {
         gap: 12px;
     }
-    
+
     .comment-slider__item {
         width: 160px;
         height: 160px;
@@ -86,11 +87,11 @@
         padding: 10px 0 6px 0;
         margin: 0 8px;
     }
-    
+
     .comment-slider__track {
         gap: 10px;
     }
-    
+
     .comment-slider__item {
         width: 140px;
         height: 140px;
@@ -104,11 +105,11 @@
         padding: 8px 0 4px 0;
         margin: 0 6px;
     }
-    
+
     .comment-slider__track {
         gap: 8px;
     }
-    
+
     .comment-slider__item {
         width: 120px;
         height: 120px;
