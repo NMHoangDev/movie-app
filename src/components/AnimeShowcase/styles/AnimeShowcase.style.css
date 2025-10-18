@@ -1,4 +1,3 @@
-/* ========== Base / Mobile-first ========== */
 .anime-showcase {
     /* container */
     max-width: 1280px;
@@ -45,7 +44,6 @@
     font-size: 16px;
 }
 
-/* content – mobile: dọc */
 .anime-showcase__content {
     display: flex;
     flex-direction: column;
@@ -53,7 +51,6 @@
     margin-bottom: 20px;
 }
 
-/* info */
 .anime-showcase__info {
     order: 2;
     text-align: left;
@@ -132,7 +129,6 @@
     color: rgba(255, 255, 255, .9);
     display: -webkit-box;
     -webkit-line-clamp: 3;
-    /* mobile ngắn hơn */
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -220,7 +216,6 @@
     box-shadow: 0 8px 32px rgba(0, 0, 0, .4);
 }
 
-/* Mini list – mobile: cuộn ngang */
 .anime-showcase__mini-list {
     display: flex;
     gap: 10px;
@@ -244,7 +239,6 @@
     height: 100px;
 }
 
-/* dùng từ file mini, nhưng ép min-width cho cuộn đẹp */
 
 /* ========== ≥640px (Mobile L) ========== */
 @media (min-width: 640px) {

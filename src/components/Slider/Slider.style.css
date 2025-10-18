@@ -64,9 +64,7 @@
     height: 100%;
 }
 
-.slider__poster-frame {
-    /* Placeholder styles - customize as needed */
-}
+
 
 .slider__poster-frame:hover {
     border-color: rgba(255, 255, 255, 0.5);
@@ -665,15 +663,12 @@
         gap: 15px;
         justify-content: center;
         top: 5%;
-        /* Tăng top để căn giữa tốt hơn */
     }
 
-    /* Ẩn poster image */
     .slider__poster-image {
         display: none;
     }
 
-    /* Điều chỉnh info để chiếm toàn bộ không gian */
     .slider__info {
         max-width: 100%;
         width: 100%;
@@ -681,63 +676,47 @@
 
     .slider__title {
         font-size: 1.8rem;
-        /* Tăng size cho đẹp hơn */
         line-height: 1.2;
         margin-bottom: 10px;
-        /* Tăng margin */
     }
 
     .slider__subtitle {
         font-size: 0.9rem;
-        /* Tăng size subtitle */
         margin-bottom: 12px;
-        /* Tăng margin */
         color: rgba(255, 255, 255, 0.85);
     }
 
     .slider__meta {
         justify-content: center;
         gap: 8px;
-        /* Tăng gap */
         flex-wrap: wrap;
         margin-bottom: 14px;
-        /* Tăng margin */
     }
 
     .slider__rating,
     .slider__year,
     .slider__duration {
         font-size: 11px;
-        /* Tăng size */
         padding: 3px 8px;
-        /* Tăng padding */
     }
 
     .slider__genres {
         justify-content: center;
         gap: 6px;
-        /* Tăng gap */
         margin-bottom: 16px;
-        /* Tăng margin */
     }
 
     .slider__genre {
         font-size: 10px;
-        /* Tăng size */
         padding: 4px 8px;
-        /* Tăng padding */
     }
 
     .slider__description {
         -webkit-line-clamp: 3;
-        /* Hiển thị 3 dòng thay vì 2 */
         font-size: 12px;
-        /* Tăng size */
         line-height: 1.4;
         margin-bottom: 20px;
-        /* Tăng margin */
         max-width: 90%;
-        /* Giới hạn width cho đẹp */
         margin-left: auto;
         margin-right: auto;
     }
@@ -745,14 +724,12 @@
     .slider__actions {
         justify-content: center;
         gap: 10px;
-        /* Tăng gap */
     }
 
     .slider__play-btn,
     .slider__favorite-btn,
     .slider__bookmark-btn {
         width: 36px;
-        /* Tăng size */
         height: 36px;
     }
 
@@ -762,17 +739,14 @@
         left: auto;
         right: auto;
         margin-top: 20px;
-        /* Tăng margin */
         padding: 0 15px;
         flex-direction: column;
         gap: 15px;
-        /* Tăng gap */
         text-align: center;
     }
 
     .slider__question {
         font-size: 13px;
-        /* Tăng size */
     }
 
     .slider__dots {
@@ -781,7 +755,6 @@
 
     .slider__dot {
         width: 8px;
-        /* Tăng size */
         height: 8px;
     }
 
@@ -792,7 +765,6 @@
     }
 }
 
-/* Extra Small Mobile (< 320px) */
 @media (max-width: 319px) {
     .slider {
         height: 45vh;
@@ -803,10 +775,8 @@
         padding: 15px 10px;
         gap: 12px;
         top: 8%;
-        /* Căn giữa tốt hơn */
     }
 
-    /* Ẩn poster image */
     .slider__poster-image {
         display: none;
     }
@@ -818,13 +788,11 @@
 
     .slider__title {
         font-size: 1.5rem;
-        /* Tăng size */
         margin-bottom: 8px;
     }
 
     .slider__subtitle {
         font-size: 0.8rem;
-        /* Tăng size */
         margin-bottom: 10px;
     }
 
@@ -840,7 +808,6 @@
 
     .slider__description {
         font-size: 11px;
-        /* Tăng size */
         -webkit-line-clamp: 2;
         margin-bottom: 18px;
         max-width: 95%;
@@ -856,13 +823,11 @@
     .slider__favorite-btn,
     .slider__bookmark-btn {
         width: 32px;
-        /* Tăng size */
         height: 32px;
     }
 
     .slider__bottom {
         margin-top: 15px;
-        /* Tăng margin */
         gap: 12px;
     }
 
@@ -875,16 +840,13 @@
     }
 }
 
-/* Điều chỉnh cho Mobile Large cũng ẩn poster nếu cần */
 @media (max-width: 599px) and (min-width: 480px) {
     .slider__poster-image {
         display: none;
-        /* Ẩn cả mobile large */
     }
 
     .slider__content {
         top: 8%;
-        /* Căn giữa tốt hơn */
         gap: 20px;
     }
 
@@ -895,20 +857,16 @@
 
     .slider__title {
         font-size: 2rem;
-        /* Tăng size khi không có poster */
     }
 
     .slider__subtitle {
         font-size: 1rem;
-        /* Tăng size */
         margin-bottom: 12px;
     }
 
     .slider__description {
         -webkit-line-clamp: 3;
-        /* Hiển thị 3 dòng */
         font-size: 13px;
-        /* Tăng size */
         margin-bottom: 20px;
         max-width: 85%;
         margin-left: auto;
@@ -929,7 +887,6 @@
     }
 }
 
-/* Landscape orientation - ẩn poster */
 @media (max-height: 500px) and (orientation: landscape) and (max-width: 767px) {
     .slider__poster-image {
         display: none;
@@ -937,7 +894,6 @@
 
     .slider__content {
         flex-direction: row;
-        /* Layout ngang cho landscape */
         text-align: left;
         justify-content: center;
         align-items: center;
