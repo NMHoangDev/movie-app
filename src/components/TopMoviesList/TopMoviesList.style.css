@@ -1,0 +1,132 @@
+.top-movies-section {
+  padding: 60px 0;
+  color: white;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 40px;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.top-movies-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0 0.5rem;
+  gap: 20px;
+}
+
+.top-movies-title {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.top-movies-redirect {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  width: 24px;
+  height: 24px;
+}
+
+.top-movies-redirect:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateX(4px);
+}
+
+.redirect-icon {
+  color: #ffffff;
+  font-size: 0.875rem;
+}
+
+.movies-carousel {
+  position: relative;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.movies-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.movies-grid {
+  display: flex;
+  gap: 24px;
+  padding: 20px 0;
+  min-width: fit-content;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .movies-grid {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .top-movies-title {
+    font-size: 1.3rem;
+  }
+  
+  .top-movies-redirect {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .redirect-icon {
+    font-size: 0.8rem;
+  }
+  
+  .movies-grid {
+    gap: 16px;
+    padding: 15px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  .top-movies-title {
+    font-size: 1.1rem;
+  }
+  
+  .top-movies-redirect {
+    width: 20px;
+    height: 20px;
+    padding: 0.2rem;
+  }
+  
+  .redirect-icon {
+    font-size: 0.7rem;
+  }
+}

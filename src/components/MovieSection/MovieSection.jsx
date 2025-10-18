@@ -3,6 +3,8 @@ import MovieList from "../MovieList/MovieList";
 import { sampleMoviesData } from "../../data/sampleMoviesData";
 import "./MovieSection.style.css";
 import CinematicSection from "../CinematicSection/CinematicSection";
+import TopMoviesList from "../TopMoviesList/TopMoviesList";
+
 
 const MovieSection = () => {
   return (
@@ -13,7 +15,25 @@ const MovieSection = () => {
           data={sampleMoviesData}
           isRedirect={true}
         />
-        <CinematicSection />
+
+        <TopMoviesList 
+            title="Top 10 phim bộ hôm nay"
+            showAllRanks={true}
+            isRedirect={true}
+            onRedirect={() => console.log('Redirect clicked!')}
+        />
+
+        <CinematicSection 
+          isRedirect={true}
+          onRedirect={() => console.log('CinematicSection redirect clicked!')}
+        />
+
+        <TopMoviesList 
+            title="Top 10 phim bộ hôm nay"
+            showAllRanks={false}
+            isRedirect={true}
+            onRedirect={() => console.log('Redirect clicked!')}
+        />
 
         <MovieList
           title="Phim Nhật Mới Oanh Tạc Chốn Này"

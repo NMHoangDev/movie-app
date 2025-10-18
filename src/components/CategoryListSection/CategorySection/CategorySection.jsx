@@ -6,6 +6,7 @@ const CategorySection = ({
   title = "Phim Hàn Quốc mới",
   subtitleLink = "#",
   items = [],
+  titleColor = "#FFFFFF",
 }) => {
   const railRef = useRef(null);
 
@@ -25,11 +26,10 @@ const CategorySection = ({
       <div className="category-section__inner">
         {/* Left column */}
         <aside className="category-section__side">
-          c
           <h3
             className="category-section__title"
             style={{
-              color: "linear-gradient(90deg, #FFFFFF 0%, #674196 100%)",
+              color: titleColor,
             }}
           >
             {title.split("\n").map((l, i) => (

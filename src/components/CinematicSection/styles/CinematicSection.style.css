@@ -7,20 +7,43 @@
 
 .cinema__header {
     display: flex;
+    justify-content: flex-start;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
+    padding: 0 0.5rem;
+    gap: 20px;
 }
 
 .cinema__title {
-    font-family: Inter;
+    color: #ffffff;
+    font-size: 1.5rem;
     font-weight: 600;
-    font-style: Semi Bold;
-    font-size: 25px;
-    leading-trim: NONE;
-    line-height: 100%;
-    letter-spacing: 0%;
+    margin: 0;
+}
 
+.cinema__redirect {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    width: 24px;
+    height: 24px;
+}
+
+.cinema__redirect:hover {
+    border-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateX(4px);
+}
+
+.redirect-icon {
+    color: #ffffff;
+    font-size: 0.875rem;
 }
 
 .cinema__title-arrow {
@@ -35,21 +58,15 @@
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 360px;
-    /* độ rộng mỗi thẻ */
     gap: 12px;
     overflow-x: auto;
-    /* padding: 4px 36px; */
-    /* chừa chỗ cho nút điều hướng */
     scroll-snap-type: x proximity;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 .cinema__rail::-webkit-scrollbar {
-    height: 6px;
-}
-
-.cinema__rail::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, .14);
-    border-radius: 999px;
+    display: none;
 }
 
 .cinema__nav {
@@ -97,6 +114,31 @@
     }
 
     .cinema__title {
-        font-size: 16px;
+        font-size: 1.3rem;
+    }
+    
+    .cinema__redirect {
+        width: 22px;
+        height: 22px;
+    }
+    
+    .redirect-icon {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cinema__title {
+        font-size: 1.1rem;
+    }
+    
+    .cinema__redirect {
+        width: 20px;
+        height: 20px;
+        padding: 0.2rem;
+    }
+    
+    .redirect-icon {
+        font-size: 0.7rem;
     }
 }

@@ -2,48 +2,117 @@
     color: #fff;
     border-radius: 12px;
     font-family: "Inter", sans-serif;
-    margin-top: 20px;
     border: 1px solid #333;
+    padding: 0;
 }
 
 .comment-page__header {
-    margin-top: 14px;
+    margin-top: var(--spacing-sm);
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: var(--spacing-xs);
     font-weight: 700;
     font-size: 18px;
-    padding: 8px;
-    margin-left: 10px;
-
+    padding: var(--spacing-xs);
 }
 
 .comment-page__title {
     color: #fff;
     font-weight: 600;
-    font-style: Semi Bold;
     font-size: 14px;
     display: flex;
     align-items: center;
     font-family: Inter;
-
-
 }
 
 .comment-page__grid {
     display: flex;
-
     justify-content: flex-start;
+    gap: 0;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 1200px) {
+    .comment-page {
+        padding: 0;
+        border-radius: 12px;
+    }
+    
+    .comment-page__header {
+        font-size: 16px;
+        padding: 6px;
+    }
+    
+    .comment-page__title {
+        font-size: 13px;
+    }
+    
+    .comment-page__grid {
+        gap: 0;
+    }
 }
 
 @media (max-width: 1024px) {
+    .comment-page {
+        margin-top: 16px;
+        border-radius: 10px;
+        padding: 0;
+    }
+    
     .comment-page__grid {
-        grid-template-columns: 1fr 1fr;
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .comment-page__header {
+        font-size: 15px;
+        gap: 6px;
     }
 }
 
 @media (max-width: 768px) {
+    .comment-page {
+        margin-top: 12px;
+        border-radius: 8px;
+        padding: 0;
+    }
+    
     .comment-page__grid {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .comment-page__header {
+        font-size: 14px;
+        padding: 4px;
+        margin-top: 10px;
+    }
+    
+    .comment-page__title {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .comment-page {
+        margin-top: 8px;
+        border-radius: 6px;
+        padding: 0;
+    }
+    
+    .comment-page__grid {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .comment-page__header {
+        font-size: 13px;
+        gap: 4px;
+        padding: 3px;
+        margin-top: 8px;
+    }
+    
+    .comment-page__title {
+        font-size: 11px;
     }
 }

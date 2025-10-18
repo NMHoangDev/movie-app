@@ -1,0 +1,233 @@
+.top-movie-card {
+  flex: 0 0 auto;
+  width: 200px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: perspective(1000px) rotateY(-2deg);
+}
+
+.top-movie-card:hover {
+  transform: perspective(1000px) rotateY(0deg) scale(1.05);
+  z-index: 10;
+}
+
+.poster-container {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+  margin-bottom: 16px;
+  clip-path: polygon(0 0, 100% 16px, 100% 100%, 0 100%);
+  transition: clip-path 0.3s ease, box-shadow 0.3s ease;
+}
+
+.top-movie-card:nth-child(odd) .poster-container {
+  clip-path: polygon(0 0, 100% 16px, 100% 100%, 0 100%);
+}
+
+.top-movie-card:nth-child(even) .poster-container {
+  clip-path: polygon(0 16px, 100% 0, 100% 100%, 0 100%);
+}
+
+.top-movie-card:hover .poster-container {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.8);
+}
+
+.movie-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.top-movie-card:hover .movie-poster {
+  transform: scale(1.1);
+}
+
+.rating-labels {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0;
+  align-items: center;
+}
+
+.age-rating {
+  background: #5e6070;
+  color: #ffffff;
+  padding: 4px 8px;
+  border-radius: 6px 0 0 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.category-rating {
+  background: #2da35d;
+  color: #ffffff;
+  padding: 4px 8px;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.movie-info {
+  padding: 0 4px;
+}
+
+.movie-details {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.rank-number {
+  font-size: 3.2rem;
+  font-weight: 900;
+  font-family: 'Arial', 'Helvetica Neue', sans-serif;
+  color: #ffd700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.text-content {
+  flex: 1;
+}
+
+.movie-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white;
+  margin: 0 0 4px 0;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.movie-subtitle {
+  font-size: 0.9rem;
+  color: #b3b3b3;
+  margin: 0 0 6px 0;
+  line-height: 1.2;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.episode-info {
+  font-size: 0.8rem;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+@media (max-width: 1200px) {
+  .top-movie-card {
+    width: 180px;
+  }
+  
+  .poster-container {
+    height: 250px;
+  }
+  
+  .top-movie-card:nth-child(odd) .poster-container {
+    clip-path: polygon(0 0, 100% 12px, 100% 100%, 0 100%);
+  }
+  
+  .top-movie-card:nth-child(even) .poster-container {
+    clip-path: polygon(0 12px, 100% 0, 100% 100%, 0 100%);
+  }
+  
+  .rank-number {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-movie-card {
+    width: 160px;
+    transform: perspective(1000px) rotateY(-1deg);
+  }
+  
+  .poster-container {
+    height: 220px;
+  }
+  
+  .top-movie-card:nth-child(odd) .poster-container {
+    clip-path: polygon(0 0, 100% 10px, 100% 100%, 0 100%);
+  }
+  
+  .top-movie-card:nth-child(even) .poster-container {
+    clip-path: polygon(0 10px, 100% 0, 100% 100%, 0 100%);
+  }
+  
+  .rank-number {
+    font-size: 2.5rem;
+  }
+  
+  .movie-title {
+    font-size: 1rem;
+  }
+  
+  .movie-subtitle {
+    font-size: 0.85rem;
+  }
+  
+  .movie-details {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-movie-card {
+    width: 140px;
+    transform: none;
+  }
+  
+  .poster-container {
+    height: 200px;
+  }
+  
+  .top-movie-card:nth-child(odd) .poster-container {
+    clip-path: polygon(0 0, 100% 8px, 100% 100%, 0 100%);
+  }
+  
+  .top-movie-card:nth-child(even) .poster-container {
+    clip-path: polygon(0 8px, 100% 0, 100% 100%, 0 100%);
+  }
+  
+  .rank-number {
+    font-size: 2.2rem;
+  }
+  
+  .movie-details {
+    gap: 6px;
+  }
+  
+  .age-rating {
+    font-size: 0.7rem;
+    padding: 3px 6px;
+  }
+  
+  .category-rating {
+    font-size: 0.65rem;
+    padding: 3px 6px;
+  }
+}
