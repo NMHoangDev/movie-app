@@ -1,0 +1,139 @@
+.block {
+    background: #242630;
+    padding: 12px 16px;
+    color: #d7e0ff;
+    font-size: 13px;
+    width: 25%;
+    border: 1px solid #33354a;
+}
+
+.block__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+.block__number {
+    margin-right: 8px;
+}
+
+.block__sub-icon {
+    margin-right: 8px;
+}
+
+.block__title {
+    color: #fff;
+    font-weight: 600;
+    font-style: Semi Bold;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    font-family: Inter;
+
+
+}
+
+.block__title-icon {
+    font-size: 20px;
+    margin-right: 4px;
+}
+
+
+.block__count {
+    background: #007bff;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.block__list,
+.block__tags {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.block__list--numbered {
+    list-style: decimal;
+    padding-left: 18px;
+}
+
+.block__item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    margin: 6px 0;
+}
+
+.block__thumb {
+    width: 30px;
+    height: 40px;
+    border-radius: 4px;
+    background: #333;
+}
+
+.block__movie {
+    color: #fff;
+    font-weight: 500;
+    margin-left: 4px;
+}
+
+.block__tag {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    padding: 3px 8px;
+    margin: 3px;
+}
+
+.block__comments {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.block__comment {
+    display: flex;
+    gap: 8px;
+}
+
+.block__avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #333;
+}
+
+.block__comment-body {
+    flex: 1;
+}
+
+.block__username {
+    font-weight: 600;
+    color: #cfe0ff;
+}
+
+.block__text {
+    color: #b0b9d4;
+    font-size: 12px;
+}
+
+.block__meta {
+    font-size: 11px;
+    color: #8891a8;
+}
+
+.block__button {
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.3333);
+    border: none;
+}

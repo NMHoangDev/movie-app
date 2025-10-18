@@ -1,0 +1,8 @@
+.wrapper {
+    padding: 20px;
+
+
+    background: linear-gradient(180deg, #31333d 0%, rgba(40, 43, 58, 0) 100%);
+
+    border-radius: 16px;
+}

@@ -31,10 +31,6 @@ const Slider = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
 
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
-
   useEffect(() => {
     const timer = setInterval(() => {
       nextSlide();

@@ -1,0 +1,38 @@
+.comment-slider {
+    position: relative;
+    overflow-x: auto;
+    display: flex;
+    gap: 16px;
+
+    padding-bottom: 10px;
+}
+
+.comment-slider__track {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+
+.comment-slider__item {
+    flex: 0 0 auto;
+    width: calc(200px + 16px);
+    height: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: rgba(145, 145, 145, 1);
+    margin: 0 8px;
+}
+
+.comment-slider__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.85);
+    transition: filter 0.2s;
+}
+
+.comment-slider__img:hover {
+    filter: brightness(1);
+}

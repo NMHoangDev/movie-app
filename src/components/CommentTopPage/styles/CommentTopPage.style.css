@@ -1,0 +1,40 @@
+.comment-page {
+    color: #fff;
+    /* padding: 20px; */
+    border-radius: 12px;
+    font-family: "Inter", sans-serif;
+    margin-top: 20px;
+    border: 1px solid #333;
+}
+
+.comment-page__header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* margin-bottom: 16px; */
+    font-weight: 700;
+    font-size: 18px;
+    padding: 8px;
+}
+
+.comment-page__title {
+    color: #cfe0ff;
+}
+
+.comment-page__grid {
+    display: flex;
+
+    justify-content: flex-start;
+}
+
+@media (max-width: 1024px) {
+    .comment-page__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .comment-page__grid {
+        grid-template-columns: 1fr;
+    }
+}

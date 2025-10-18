@@ -3,6 +3,9 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import Slider from "./components/Slider/Slider";
 import TopicSection from "./components/TopicSection/TopicSection";
+import ContinueWatchingSection from "./components/ContinueWatchingSection/ContinueWatchingSection";
+import CategoryListSection from "./components/CategoryListSection/CategoryListSection";
+import CommentTopPage from "./components/CommentTopPage/CommentTopPage";
 
 function App() {
   return (
@@ -10,9 +13,11 @@ function App() {
       <Header />
       <main>
         <Slider />
-        {/* Các components khác */}
         <div className="main-content">
           <TopicSection />
+          <ContinueWatchingSection />
+          <CategoryListSection />
+          <CommentTopPage />
         </div>
       </main>
     </div>
