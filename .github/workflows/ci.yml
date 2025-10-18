@@ -1,0 +1,57 @@
+name: CI Tests
+
+on:
+  push:
+    branches: [ main, master, develop ]
+  pull_request:
+    branches: [ main, master, develop ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+          
+      - name: Debug Node/npm
+        run: |
+          node --version
+          npm --version
+          echo "Listing package.json and package-lock.json head lines"
+          head -n 50 package.json || true
+          head -n 50 package-lock.json || true
+
+      - name: Install dependencies
+        run: npm install
+        
+      - name: Run linting
+        run: npm run lint --if-present
+        
+      - name: Run tests
+        run: npm test -- --coverage --ci --watchAll=false
+        env:
+          CI: true
+          
+      - name: Build application
+        run: npm run build
+        env:
+          CI: false
+          
+      - name: Upload coverage to Codecov
+        if: matrix.node-version == '18.x'
+        uses: codecov/codecov-action@v3
+        with:
+          file: ./coverage/lcov.info
+          flags: unittests
+          name: codecov-umbrella
