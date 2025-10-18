@@ -1,0 +1,30 @@
+.movie-section {
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+.movie-section-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .movie-section {
+    padding: 1rem 0;
+  }
+  
+  .movie-section-container {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-section {
+    padding: 0.5rem 0;
+  }
+  
+  .movie-section-container {
+    padding: 0 0.25rem;
+  }
+}

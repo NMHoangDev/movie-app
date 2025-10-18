@@ -6,6 +6,7 @@ import TopicSection from "./components/TopicSection/TopicSection";
 import ContinueWatchingSection from "./components/ContinueWatchingSection/ContinueWatchingSection";
 import CategoryListSection from "./components/CategoryListSection/CategoryListSection";
 import CommentTopPage from "./components/CommentTopPage/CommentTopPage";
+import MovieSection from "./components/MovieSection/MovieSection";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <ContinueWatchingSection />
           <CategoryListSection />
           <CommentTopPage />
+          <MovieSection />
         </div>
       </main>
     </div>
