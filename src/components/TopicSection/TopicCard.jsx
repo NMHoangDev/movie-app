@@ -1,6 +1,5 @@
 import React from "react";
 import "./styles/TopicCard.style.css";
-import { FaArrowRight } from "react-icons/fa";
 
 const TopicCard = ({ label, subtitle, color = "blue", href = "#" }) => {
   return (

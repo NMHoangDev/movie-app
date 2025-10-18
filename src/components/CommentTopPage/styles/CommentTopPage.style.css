@@ -1,6 +1,5 @@
 .comment-page {
     color: #fff;
-    /* padding: 20px; */
     border-radius: 12px;
     font-family: "Inter", sans-serif;
     margin-top: 20px;
@@ -8,17 +7,27 @@
 }
 
 .comment-page__header {
+    margin-top: 14px;
     display: flex;
     align-items: center;
     gap: 8px;
-    /* margin-bottom: 16px; */
     font-weight: 700;
     font-size: 18px;
     padding: 8px;
+    margin-left: 10px;
+
 }
 
 .comment-page__title {
-    color: #cfe0ff;
+    color: #fff;
+    font-weight: 600;
+    font-style: Semi Bold;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    font-family: Inter;
+
+
 }
 
 .comment-page__grid {

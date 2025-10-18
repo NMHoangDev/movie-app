@@ -1,0 +1,102 @@
+.cinema {
+    padding: 12px 16px 24px;
+    color: #eaf2ff;
+    margin-top: 10px;
+
+}
+
+.cinema__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.cinema__title {
+    font-family: Inter;
+    font-weight: 600;
+    font-style: Semi Bold;
+    font-size: 25px;
+    leading-trim: NONE;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+}
+
+.cinema__title-arrow {
+    opacity: .85;
+}
+
+.cinema__viewport {
+    position: relative;
+}
+
+.cinema__rail {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 360px;
+    /* độ rộng mỗi thẻ */
+    gap: 12px;
+    overflow-x: auto;
+    /* padding: 4px 36px; */
+    /* chừa chỗ cho nút điều hướng */
+    scroll-snap-type: x proximity;
+}
+
+.cinema__rail::-webkit-scrollbar {
+    height: 6px;
+}
+
+.cinema__rail::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, .14);
+    border-radius: 999px;
+}
+
+.cinema__nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 48px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, .45);
+    color: #fff;
+    font-size: 22px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    opacity: .9;
+    backdrop-filter: blur(3px);
+    transition: background .2s, opacity .2s;
+}
+
+.cinema__nav:hover {
+    background: rgba(0, 0, 0, .6);
+    opacity: 1;
+}
+
+.cinema__nav--prev {
+    left: 4px;
+}
+
+.cinema__nav--next {
+    right: 4px;
+}
+
+@media (max-width: 1024px) {
+    .cinema__rail {
+        grid-auto-columns: 320px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cinema__rail {
+        grid-auto-columns: 280px;
+        padding: 4px 30px;
+    }
+
+    .cinema__title {
+        font-size: 16px;
+    }
+}

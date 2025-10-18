@@ -39,7 +39,6 @@
     height: 100%;
     background: linear-gradient(to top,
             #282B3A 0%,
-
             rgba(40, 43, 58, 0.00) 30%);
     backdrop-filter: blur(1px);
     -webkit-backdrop-filter: blur(1px);
@@ -54,7 +53,6 @@
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
-    /* height: 100%; */
     padding: 50px;
     gap: 40px;
     top: 15%;
