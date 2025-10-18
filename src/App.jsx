@@ -7,6 +7,7 @@ import ContinueWatchingSection from "./components/ContinueWatchingSection/Contin
 import CategoryListSection from "./components/CategoryListSection/CategoryListSection";
 import CommentTopPage from "./components/CommentTopPage/CommentTopPage";
 import MovieSection from "./components/MovieSection/MovieSection";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

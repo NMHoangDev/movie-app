@@ -1,0 +1,74 @@
+.up-card {
+    width: 100%;
+    color: #eaf2ff;
+}
+
+.up-card__poster {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #0e1016;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, .25);
+}
+
+.up-card__img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.up-card__fade {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 45%;
+    background: linear-gradient(to top, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0));
+    pointer-events: none;
+}
+
+.up-card__badge {
+    position: absolute;
+    left: 12px;
+    bottom: 0;
+    padding: 6px 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333333;
+    ;
+    background: #fff;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .25);
+    z-index: 2;
+}
+
+.up-card__title {
+    margin: 10px 0 2px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.up-card__subtitle {
+    margin: 0;
+    font-size: 12px;
+    color: #aebbd6;
+}
+
+/* Ellipsis 1 dòng */
+.text-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.up-card:hover .up-card__img {
+    transform: scale(1.02);
+    transition: transform .2s ease;
+}

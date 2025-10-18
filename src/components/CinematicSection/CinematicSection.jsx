@@ -2,6 +2,10 @@ import React, { useRef } from "react";
 import { IoChevronForward } from 'react-icons/io5';
 import "./styles/CinematicSection.style.css";
 import CinematicCard from "./CinematicCard";
+import theGhostGame from "../../assets/image/theGhostGame.png";
+import theGhostGameSub from "../../assets/image/theGhostGameSub.png";
+import familySecret from "../../assets/image/familySecret.png";
+import familySecretSub from "../../assets/image/familySecretSub.png";
 
 const demoItems = [
   {
@@ -9,60 +13,52 @@ const demoItems = [
     titleVi: "Lời Chưa Nói",
     titleEn: "Family Secret",
     meta: "T18 • 2025 • 1h 45p",
-    poster:
-      "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=1200&q=80&auto=format&fit=crop",
-    badge:
-      "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=200&q=60&auto=format&fit=crop",
+    poster: familySecret,
+    subPoster: familySecretSub,
     avatars: [
       "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?w=80&h=80&fit=crop",
       "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=80&h=80&fit=crop",
     ],
-    pills: ["PG-13", "12 TẬP"],
+    pills: ["P. Đề", "Thuyết Minh"],
   },
   {
     id: "2",
     titleVi: "Bầy Hôi Sinh",
     titleEn: "The Ghost Game",
     meta: "T18 • 2025 • 1h 35p",
-    poster:
-      "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=1200&q=80&auto=format&fit=crop",
-    badge:
-      "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=200&q=60&auto=format&fit=crop",
+    poster: theGhostGame,
+    subPoster: theGhostGameSub,
     avatars: [
       "https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=80&h=80&fit=crop",
       "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?w=80&h=80&fit=crop",
     ],
-    pills: ["PG-16", "7 TẬP"],
+    pills: ["P. Đề", "Thuyết Minh"],
   },
   {
     id: "3",
     titleVi: "Lời Chưa Nói",
     titleEn: "Family Secret",
     meta: "T18 • 2025 • 1h 45p",
-    poster:
-      "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?w=1200&q=80&auto=format&fit=crop",
-    badge:
-      "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=200&q=60&auto=format&fit=crop",
+    poster: familySecret,
+    subPoster: familySecretSub,
     avatars: [
       "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?w=80&h=80&fit=crop",
       "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=80&h=80&fit=crop",
     ],
-    pills: ["PG-13", "12 TẬP"],
+    pills: ["P. Đề", "Thuyết Minh"],
   },
   {
     id: "4",
     titleVi: "Bầy Hôi Sinh",
     titleEn: "The Ghost Game",
     meta: "T18 • 2025 • 1h 35p",
-    poster:
-      "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=1200&q=80&auto=format&fit=crop",
-    badge:
-      "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=200&q=60&auto=format&fit=crop",
+    poster: theGhostGame,
+    subPoster: theGhostGameSub,
     avatars: [
       "https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=80&h=80&fit=crop",
       "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?w=80&h=80&fit=crop",
     ],
-    pills: ["PG-16", "7 TẬP"],
+    pills: ["P. Đề", "Thuyết Minh"],
   },
 ];
 

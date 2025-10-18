@@ -36,12 +36,12 @@
     .topic-section {
         padding: 14px 18px 22px;
     }
-    
+
     .topic-section__list {
         grid-template-columns: repeat(6, minmax(200px, 1fr));
         gap: 14px;
     }
-    
+
     .topic-section__title {
         font-size: 19px;
     }
@@ -51,12 +51,12 @@
     .topic-section {
         padding: 12px 16px 20px;
     }
-    
+
     .topic-section__list {
         grid-template-columns: repeat(4, minmax(190px, 1fr));
         gap: 12px;
     }
-    
+
     .topic-section__title {
         font-size: 18px;
     }
@@ -66,12 +66,12 @@
     .topic-section {
         padding: 10px 14px 18px;
     }
-    
+
     .topic-section__title {
         font-size: 17px;
         margin-bottom: 10px;
     }
-    
+
     .topic-section__list {
         display: flex;
         gap: 12px;
@@ -93,7 +93,7 @@
     .topic-section {
         padding: 8px 12px 16px;
     }
-    
+
     .topic-section__title {
         font-size: 16px;
         margin-bottom: 8px;

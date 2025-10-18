@@ -1,11 +1,7 @@
-/* Kích thước giống ảnh mẫu (nhỏ gọn) */
 .cin-card {
     width: 100%;
-    /* bạn có thể tăng/giảm */
     border-radius: 8px;
     overflow: hidden;
-    /* background: #12151b; */
-    /* box-shadow: 0 12px 26px rgba(0, 0, 0, .35); */
     color: #eaf2ff;
 }
 
@@ -14,7 +10,6 @@
     outline-offset: 2px;
 }
 
-/* Poster ngang */
 .cin-card__media {
     position: relative;
     width: 100%;
@@ -33,23 +28,16 @@
 
 }
 
-/* Footer tối */
 .cin-card__footer {
     position: relative;
     background: transparent;
-
-    /* align-items: center; */
-
 }
 
-/* Poster phụ (dọc) – đè góc trái dưới poster chính */
 .cin-card__sub {
     position: absolute;
     left: 12px;
     top: -28px;
-    /* đè lên đường biên giữa media & footer */
     width: 58px;
-    /* tỉ lệ dọc */
     height: 90px;
     object-fit: cover;
     border-radius: 10px;
@@ -58,7 +46,6 @@
     z-index: 3;
 }
 
-/* Nội dung bên phải poster phụ */
 .cin-card__body {
     position: relative;
     padding: 10px 12px 20px 88px;
@@ -71,11 +58,9 @@
     top: -30px;
 }
 
-/* Pills nằm ngay trên tiêu đề */
 .cin-card__pills {
     position: relative;
     display: flex;
-    /* gap: 6px; */
     border-top-right-radius: 5px;
     top: -3px;
 }
@@ -84,7 +69,6 @@
     font-size: 11px;
     color: #fff;
     padding: 4px 8px;
-    /* border-radius: 999px; */
     background: #5E6070;
     border-top-left-radius: 5px;
     border: 1px solid rgba(255, 255, 255, .18);
@@ -123,7 +107,7 @@
     text-overflow: ellipsis;
 }
 
-/* Responsive nhỏ hơn */
+/* Responsive  */
 @media (max-width: 768px) {
     .cin-card {
         width: 280px;

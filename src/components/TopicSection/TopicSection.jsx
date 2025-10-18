@@ -19,7 +19,6 @@ const TopicSection = () => {
         <h2 className="topic-section__title">Bạn đang quan tâm gì?</h2>
       </div>
 
-      {/* Wrap có thể kéo ngang ở mobile, grid ở desktop */}
       <div className="topic-section__list" role="list">
         {topics.map((t) => (
           <TopicCard key={t.id} label={t.label} color={t.color} href="#" />
