@@ -1,0 +1,50 @@
+.header__nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    /* ✅ Cho phép xuống hàng */
+    justify-content: flex-start;
+    /* ✅ Căn trái, không dồn ra ngoài */
+    gap: 12px 16px;
+    /* ✅ Giãn cách đều cả hàng và cột */
+    max-width: 100%;
+    /* ✅ Giới hạn không tràn */
+    overflow: hidden;
+    /* ✅ Ngăn tràn nội dung */
+    box-sizing: border-box;
+}
+
+.header__nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 6px 8px;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+    white-space: nowrap;
+    /* ✅ Không ngắt giữa từ */
+}
+
+.header__nav-link:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.header__nav-link--active {
+    color: #fff;
+    border-bottom: 2px solid #0b6ff2;
+}
+
+/* 📱 Responsive tablet/mobile */
+@media (max-width: 1024px) {
+    .header__nav {
+        width: 100%;
+        justify-content: center;
+        /* hoặc flex-start nếu bạn muốn căn trái */
+        flex-wrap: wrap;
+        /* đảm bảo xuống hàng */
+        gap: 10px 12px;
+        padding: 8px 0;
+    }
+}

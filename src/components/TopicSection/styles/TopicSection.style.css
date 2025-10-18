@@ -1,0 +1,52 @@
+/* Block: topic-section */
+.topic-section {
+    padding: 12px 16px 24px;
+    background: #282B3A;
+    border-top: 1px solid rgba(59, 130, 246, 0.25);
+}
+
+.topic-section__header {
+    margin-bottom: 12px;
+}
+
+.topic-section__title {
+    margin: 0;
+    color: #e6eefc;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: left;
+}
+
+/* List: dùng grid trên desktop, scroll ngang trên mobile */
+.topic-section__list {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(210px, 1fr));
+    gap: 16px;
+}
+
+@media (max-width: 1024px) {
+    .topic-section__list {
+        grid-template-columns: repeat(4, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .topic-section__list {
+        display: flex;
+        gap: 12px;
+        overflow-x: auto;
+        /* kéo ngang */
+        scroll-snap-type: x mandatory;
+        /* bám khung đẹp */
+        padding-bottom: 4px;
+    }
+
+    .topic-section__list::-webkit-scrollbar {
+        height: 6px;
+    }
+
+    .topic-section__list::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, .15);
+        border-radius: 999px;
+    }
+}
