@@ -1,0 +1,145 @@
+/* Kích thước giống ảnh mẫu (nhỏ gọn) */
+.cin-card {
+    width: 100%;
+    /* bạn có thể tăng/giảm */
+    border-radius: 8px;
+    overflow: hidden;
+    /* background: #12151b; */
+    /* box-shadow: 0 12px 26px rgba(0, 0, 0, .35); */
+    color: #eaf2ff;
+}
+
+.cin-card--active {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* Poster ngang */
+.cin-card__media {
+    position: relative;
+    width: 100%;
+    height: 160px;
+    background: #0e1016;
+}
+
+.cin-card__img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+
+}
+
+/* Footer tối */
+.cin-card__footer {
+    position: relative;
+    background: transparent;
+
+    /* align-items: center; */
+
+}
+
+/* Poster phụ (dọc) – đè góc trái dưới poster chính */
+.cin-card__sub {
+    position: absolute;
+    left: 12px;
+    top: -28px;
+    /* đè lên đường biên giữa media & footer */
+    width: 58px;
+    /* tỉ lệ dọc */
+    height: 90px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .35);
+    background: #222;
+    z-index: 3;
+}
+
+/* Nội dung bên phải poster phụ */
+.cin-card__body {
+    position: relative;
+    padding: 10px 12px 20px 88px;
+    /* 58 + khoảng cách */
+    display: grid;
+    gap: 2px;
+    z-index: 2;
+    background-color: transparent;
+    margin-bottom: 10px;
+    top: -30px;
+}
+
+/* Pills nằm ngay trên tiêu đề */
+.cin-card__pills {
+    position: relative;
+    display: flex;
+    /* gap: 6px; */
+    border-top-right-radius: 5px;
+    top: -3px;
+}
+
+.cin-card__pill {
+    font-size: 11px;
+    color: #fff;
+    padding: 4px 8px;
+    /* border-radius: 999px; */
+    background: #5E6070;
+    border-top-left-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, .18);
+    line-height: 1.2;
+}
+
+.cin-card__pill--green {
+    background: #16a34a;
+    border-color: transparent;
+    border-top-right-radius: 5px;
+
+}
+
+/* Text */
+.cin-card__title {
+    margin: 2px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.cin-card__subtitle {
+    color: #cbd5e1;
+    font-size: 12px;
+}
+
+.cin-card__meta {
+    color: #93a3c3;
+    font-size: 12px;
+}
+
+/* Ellipsis helper */
+.text-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Responsive nhỏ hơn */
+@media (max-width: 768px) {
+    .cin-card {
+        width: 280px;
+    }
+
+    .cin-card__media {
+        height: 150px;
+    }
+
+    .cin-card__sub {
+        top: -26px;
+        width: 54px;
+        height: 72px;
+    }
+
+    .cin-card__body {
+        padding-left: 84px;
+    }
+}

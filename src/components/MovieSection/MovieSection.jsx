@@ -1,9 +1,8 @@
-import React from 'react';
-import MovieList from '../MovieList/MovieList';
-import { 
-  sampleMoviesData, 
-} from '../../data/sampleMoviesData';
-import './MovieSection.style.css';
+import React from "react";
+import MovieList from "../MovieList/MovieList";
+import { sampleMoviesData } from "../../data/sampleMoviesData";
+import "./MovieSection.style.css";
+import CinematicSection from "../CinematicSection/CinematicSection";
 
 const MovieSection = () => {
   return (
@@ -14,6 +13,7 @@ const MovieSection = () => {
           data={sampleMoviesData}
           isRedirect={true}
         />
+        <CinematicSection />
 
         <MovieList
           title="Phim Nhật Mới Oanh Tạc Chốn Này"

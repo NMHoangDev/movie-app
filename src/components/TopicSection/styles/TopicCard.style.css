@@ -71,8 +71,7 @@
 
 .topic-card__link:hover .topic-card__arrow {
     transform: translateX(3px);
-    /* hiệu ứng trượt sang phải */
-    /* color: #fff; */
+
 }
 
 

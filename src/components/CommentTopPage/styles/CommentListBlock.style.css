@@ -3,7 +3,7 @@
     padding: 12px 16px;
     color: #d7e0ff;
     font-size: 13px;
-    width: 25%;
+
     border: 1px solid #33354a;
 }
 
@@ -104,6 +104,10 @@
 .block__comment {
     display: flex;
     gap: 8px;
+    background: #00000055;
+    border-radius: 10px;
+    padding: 14px;
+
 }
 
 .block__avatar {
@@ -117,14 +121,30 @@
     flex: 1;
 }
 
+.block__comment-content {
+    display: flex;
+    justify-content: flex;
+}
+
 .block__username {
     font-weight: 600;
     color: #cfe0ff;
+    width: 70px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+
 }
 
 .block__text {
     color: #b0b9d4;
     font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+
 }
 
 .block__meta {
@@ -136,4 +156,6 @@
     background-color: transparent;
     color: rgba(255, 255, 255, 0.3333);
     border: none;
+    font-size: 11px;
+    padding: 0;
 }
