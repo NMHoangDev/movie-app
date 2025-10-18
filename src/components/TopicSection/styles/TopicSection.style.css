@@ -1,8 +1,9 @@
 /* Block: topic-section */
 .topic-section {
-    padding: 12px 16px 24px;
+    /* padding: 12px 16px 24px; */
     background: #282B3A;
-    border-top: 1px solid rgba(59, 130, 246, 0.25);
+    uiwdth: 100%;
+
 }
 
 .topic-section__header {
@@ -12,8 +13,8 @@
 .topic-section__title {
     margin: 0;
     color: #e6eefc;
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 500;
     text-align: left;
 }
 
@@ -35,18 +36,43 @@
         display: flex;
         gap: 12px;
         overflow-x: auto;
+        overflow-y: hidden;
         /* kéo ngang */
         scroll-snap-type: x mandatory;
         /* bám khung đẹp */
         padding-bottom: 4px;
+
+        /* Ẩn scrollbar cho tất cả browser */
+        scrollbar-width: none;
+        /* Firefox */
+        -ms-overflow-style: none;
+        /* Internet Explorer 10+ */
     }
 
+    /* Ẩn scrollbar cho WebKit browsers (Chrome, Safari, Edge) */
     .topic-section__list::-webkit-scrollbar {
-        height: 6px;
+        display: none;
+        width: 0;
+        height: 0;
+        background: transparent;
+    }
+
+    .topic-section__list::-webkit-scrollbar-track {
+        display: none;
     }
 
     .topic-section__list::-webkit-scrollbar-thumb {
-        background: rgba(255, 255, 255, .15);
-        border-radius: 999px;
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .topic-section {
+        padding: 12px 12px 24px;
+    }
+
+    .topic-section__list {
+        gap: 10px;
+        padding-bottom: 2px;
     }
 }
