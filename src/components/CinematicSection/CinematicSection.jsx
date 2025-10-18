@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { IoChevronForward } from 'react-icons/io5';
 import "./styles/CinematicSection.style.css";
 import CinematicCard from "./CinematicCard";
 
@@ -68,8 +69,17 @@ const demoItems = [
 const CinematicSection = ({
   title = "Mãn Nhãn với Phim Chiếu Rạp",
   items = demoItems,
+  isRedirect = false,
+  onRedirect
 }) => {
   const railRef = useRef(null);
+  
+  const handleRedirectClick = () => {
+    if (onRedirect && typeof onRedirect === 'function') {
+      onRedirect();
+    }
+  };
+  
   const scroll = (dir) => {
     const el = railRef.current;
     if (!el) return;
@@ -83,9 +93,12 @@ const CinematicSection = ({
   return (
     <section className="cinema">
       <div className="cinema__header">
-        <h3 className="cinema__title">
-          {title} <span className="cinema__title-arrow">›</span>
-        </h3>
+        <h3 className="cinema__title">{title}</h3>
+        {isRedirect && (
+          <button className="cinema__redirect" onClick={handleRedirectClick}>
+            <IoChevronForward className="redirect-icon" />
+          </button>
+        )}
       </div>
 
       <div

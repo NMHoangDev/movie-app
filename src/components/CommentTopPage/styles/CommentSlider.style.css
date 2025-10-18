@@ -3,28 +3,34 @@
     overflow-x: auto;
     display: flex;
     gap: 16px;
+    padding: 16px 0 10px 0;
+    margin: 0 16px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
 
-    padding-bottom: 10px;
+.comment-slider::-webkit-scrollbar {
+    display: none;
 }
 
 .comment-slider__track {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
-    padding: 12px;
-
-
+    padding: 0;
+    gap: 16px;
 }
 
 .comment-slider__item {
     flex: 0 0 auto;
-    width: calc(200px + 16px);
+    width: 200px;
     height: 200px;
     border-radius: 8px;
     overflow: hidden;
     background: rgba(145, 145, 145, 1);
-    margin: 0 8px;
+    margin: 0;
 }
 
 .comment-slider__img {
@@ -37,4 +43,75 @@
 
 .comment-slider__img:hover {
     filter: brightness(1);
+}
+
+@media (max-width: 1200px) {
+    .comment-slider {
+        gap: 14px;
+        margin: 0 14px;
+        padding: 14px 0 8px 0;
+    }
+    
+    .comment-slider__track {
+        gap: 14px;
+    }
+    
+    .comment-slider__item {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .comment-slider {
+        gap: 12px;
+        margin: 0 12px;
+        padding: 12px 0 8px 0;
+    }
+    
+    .comment-slider__track {
+        gap: 12px;
+    }
+    
+    .comment-slider__item {
+        width: 160px;
+        height: 160px;
+        border-radius: 6px;
+    }
+}
+
+@media (max-width: 768px) {
+    .comment-slider {
+        gap: 10px;
+        padding: 10px 0 6px 0;
+        margin: 0 8px;
+    }
+    
+    .comment-slider__track {
+        gap: 10px;
+    }
+    
+    .comment-slider__item {
+        width: 140px;
+        height: 140px;
+        border-radius: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .comment-slider {
+        gap: 8px;
+        padding: 8px 0 4px 0;
+        margin: 0 6px;
+    }
+    
+    .comment-slider__track {
+        gap: 8px;
+    }
+    
+    .comment-slider__item {
+        width: 120px;
+        height: 120px;
+        border-radius: 4px;
+    }
 }

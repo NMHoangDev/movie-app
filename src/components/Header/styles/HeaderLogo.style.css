@@ -23,3 +23,33 @@
   color: #b7c3d7;
   font-size: 12px;
 }
+
+@media (max-width: 1024px) {
+  .header__logo {
+    min-width: 140px;
+    gap: 6px;
+  }
+  
+  .header__logo-text {
+    font-size: 16px;
+  }
+  
+  .header__logo-subtext {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 833px) and (min-width: 769px) {
+  .header__logo {
+    min-width: 120px;
+    gap: 4px;
+  }
+  
+  .header__logo-text {
+    font-size: 14px;
+  }
+  
+  .header__logo-subtext {
+    font-size: 10px;
+  }
+}

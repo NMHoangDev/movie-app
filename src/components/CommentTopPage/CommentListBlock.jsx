@@ -13,15 +13,18 @@ import { ReactComponent as ChartArrowRiseRed } from "../../assets/icons/ChartArr
 
 import avatar from "../../assets/avatar.png";
 const CommentListBlock = ({ type }) => {
-  const [width, setWidth] = React.useState("25%");
+  const [blockClass, setBlockClass] = React.useState("block");
   useEffect(() => {
-    if (type === "category") {
-      setWidth("20%");
+    if (type === "score") {
+      setBlockClass("block block--score");
+    } else if (type === "favorite") {
+      setBlockClass("block block--favorite");
+    } else if (type === "category") {
+      setBlockClass("block block--category");
+    } else if (type === "recent") {
+      setBlockClass("block block--recent");
     }
-    if (type === "recent") {
-      setWidth("30%");
-    }
-  }, []);
+  }, [type]);
   const interests = [
     { name: "Chính Kịch", background: "#742D4B" },
     { name: "Lãng Mạn", background: "#387FDA" },
@@ -130,7 +133,7 @@ const CommentListBlock = ({ type }) => {
         );
       case "category":
         return (
-          <div style={{ width: "70%" }}>
+          <>
             <div className="block__header">
               <span className="block__title">
                 <span className="block__title">
@@ -175,7 +178,7 @@ const CommentListBlock = ({ type }) => {
               ))}
             </ul>
             <button className="block__button">Xem Thêm</button>
-          </div>
+          </>
         );
       case "recent":
         return (
@@ -224,7 +227,7 @@ const CommentListBlock = ({ type }) => {
   };
 
   return (
-    <div className="block" style={{ width: width }}>
+    <div className={blockClass}>
       {renderContent()}
     </div>
   );

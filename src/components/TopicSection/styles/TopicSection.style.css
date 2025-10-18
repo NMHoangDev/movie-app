@@ -1,13 +1,11 @@
-/* Block: topic-section */
 .topic-section {
-    /* padding: 12px 16px 24px; */
     background: #282B3A;
-    uiwdth: 100%;
-
+    width: 100%;
+    padding: var(--spacing-sm);
 }
 
 .topic-section__header {
-    margin-bottom: 12px;
+    margin-bottom: var(--spacing-xs);
 }
 
 .topic-section__title {
@@ -18,57 +16,87 @@
     text-align: left;
 }
 
-/* List: dùng grid trên desktop, scroll ngang trên mobile */
 .topic-section__list {
-    display: grid;
-    grid-template-columns: repeat(7, minmax(210px, 1fr));
+    display: flex;
     gap: 16px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 4px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+.topic-section__list::-webkit-scrollbar {
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    .topic-section {
+        padding: 14px 18px 22px;
+    }
+    
+    .topic-section__list {
+        grid-template-columns: repeat(6, minmax(200px, 1fr));
+        gap: 14px;
+    }
+    
+    .topic-section__title {
+        font-size: 19px;
+    }
 }
 
 @media (max-width: 1024px) {
+    .topic-section {
+        padding: 12px 16px 20px;
+    }
+    
     .topic-section__list {
-        grid-template-columns: repeat(4, minmax(200px, 1fr));
+        grid-template-columns: repeat(4, minmax(190px, 1fr));
+        gap: 12px;
+    }
+    
+    .topic-section__title {
+        font-size: 18px;
     }
 }
 
 @media (max-width: 768px) {
+    .topic-section {
+        padding: 10px 14px 18px;
+    }
+    
+    .topic-section__title {
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+    
     .topic-section__list {
         display: flex;
         gap: 12px;
         overflow-x: auto;
         overflow-y: hidden;
-        /* kéo ngang */
         scroll-snap-type: x mandatory;
-        /* bám khung đẹp */
         padding-bottom: 4px;
-
-        /* Ẩn scrollbar cho tất cả browser */
         scrollbar-width: none;
-        /* Firefox */
         -ms-overflow-style: none;
-        /* Internet Explorer 10+ */
+        -webkit-overflow-scrolling: touch;
     }
 
-    /* Ẩn scrollbar cho WebKit browsers (Chrome, Safari, Edge) */
     .topic-section__list::-webkit-scrollbar {
-        display: none;
-        width: 0;
-        height: 0;
-        background: transparent;
-    }
-
-    .topic-section__list::-webkit-scrollbar-track {
-        display: none;
-    }
-
-    .topic-section__list::-webkit-scrollbar-thumb {
         display: none;
     }
 }
 
 @media (max-width: 480px) {
     .topic-section {
-        padding: 12px 12px 24px;
+        padding: 8px 12px 16px;
+    }
+    
+    .topic-section__title {
+        font-size: 16px;
+        margin-bottom: 8px;
     }
 
     .topic-section__list {

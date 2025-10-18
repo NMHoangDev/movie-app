@@ -15,11 +15,21 @@ function App() {
       <main>
         <Slider />
         <div className="main-content">
-          <TopicSection />
-          <ContinueWatchingSection />
-          <CategoryListSection />
-          <CommentTopPage />
-          <MovieSection />
+          <div className="section-spacing">
+            <TopicSection />
+          </div>
+          <div className="section-spacing">
+            <ContinueWatchingSection />
+          </div>
+          <div className="section-spacing">
+            <CategoryListSection />
+          </div>
+          <div className="section-spacing">
+            <CommentTopPage />
+          </div>
+          <div className="section-spacing">
+            <MovieSection />
+          </div>
         </div>
       </main>
     </div>

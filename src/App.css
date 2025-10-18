@@ -1,5 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+:root {
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 32px;
+  --spacing-xl: 48px;
+  --spacing-xxl: 64px;
+  
+  --section-spacing: var(--spacing-xl);
+  --component-spacing: var(--spacing-lg);
+  --element-spacing: var(--spacing-sm);
+}
+
 .main-content {
-  padding: 30px;
+  padding: var(--spacing-lg);
   background-color: #282B3A;
-  ;
+}
+
+.section-spacing {
+  margin-bottom: var(--section-spacing);
+}
+
+.component-spacing {
+  margin-bottom: var(--component-spacing);
+}
+
+@media (max-width: 1024px) {
+  .main-content {
+    padding: var(--spacing-md);
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: var(--spacing-sm);
+  }
+  
+  :root {
+    --section-spacing: var(--spacing-lg);
+    --component-spacing: var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: var(--spacing-xs);
+  }
+  
+  :root {
+    --section-spacing: var(--spacing-md);
+    --component-spacing: var(--spacing-sm);
+  }
 }

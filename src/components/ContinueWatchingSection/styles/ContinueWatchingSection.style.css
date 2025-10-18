@@ -1,7 +1,5 @@
 /* Block */
 .continue-watching {
-    margin-top: 40px;
-
     color: #e8eefc;
 }
 
@@ -10,8 +8,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 12px;
-    margin-bottom: 12px;
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-xs);
 }
 
 .continue-watching__title {
@@ -45,32 +43,95 @@
     gap: 18px;
 }
 
+@media (max-width: 1200px) {
+    .continue-watching__list {
+        grid-template-columns: repeat(5, 170px);
+        gap: 16px;
+    }
+    
+    .continue-watching__title {
+        font-size: 18px;
+    }
+    
+    .continue-watching__more {
+        font-size: 16px;
+    }
+}
+
 /* Tablet */
 @media (max-width: 1024px) {
+    .continue-watching {
+        margin-top: 32px;
+    }
+    
     .continue-watching__list {
-        grid-template-columns: repeat(4, 180px);
+        grid-template-columns: repeat(4, 160px);
+        gap: 14px;
+    }
+    
+    .continue-watching__title {
+        font-size: 17px;
+    }
+    
+    .continue-watching__more {
+        font-size: 15px;
+        padding: 5px 7px;
     }
 }
 
 @media (max-width: 768px) {
     .continue-watching {
-        padding: 14px 14px 20px;
+        margin-top: 24px;
+        padding: 0 14px;
+    }
+
+    .continue-watching__title {
+        font-size: 16px;
+    }
+    
+    .continue-watching__more {
+        font-size: 14px;
+        padding: 4px 6px;
     }
 
     .continue-watching__list {
         display: flex;
-        gap: 14px;
+        gap: 12px;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
         padding-bottom: 6px;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
     }
 
     .continue-watching__list::-webkit-scrollbar {
-        height: 6px;
+        display: none;
     }
+}
 
-    .continue-watching__list::-webkit-scrollbar-thumb {
-        background: rgba(255, 255, 255, 0.15);
-        border-radius: 999px;
+@media (max-width: 480px) {
+    .continue-watching {
+        margin-top: 20px;
+        padding: 0 12px;
+    }
+    
+    .continue-watching__header {
+        gap: 8px;
+        margin-bottom: 10px;
+    }
+    
+    .continue-watching__title {
+        font-size: 15px;
+    }
+    
+    .continue-watching__more {
+        font-size: 13px;
+        padding: 3px 5px;
+        border-radius: 6px;
+    }
+    
+    .continue-watching__list {
+        gap: 10px;
+        padding-bottom: 4px;
     }
 }
