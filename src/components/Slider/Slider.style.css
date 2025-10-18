@@ -12,7 +12,6 @@
     position: relative;
     width: 100%;
     height: 100%;
-
 }
 
 .slider__slide {
@@ -46,7 +45,6 @@
     pointer-events: none;
 }
 
-
 .slider__content {
     position: relative;
     z-index: 2;
@@ -54,7 +52,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
-    padding: var(--spacing-xl);
+    padding: var(--spacing-xl, 60px);
     gap: 40px;
     top: 10%;
 }
@@ -67,24 +65,11 @@
 }
 
 .slider__poster-frame {
-    /* width: 240px;
-    height: 340px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px dashed rgba(255, 255, 255, 0.3);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 14px;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    transition: all 0.3s ease; */
+    /* Placeholder styles - customize as needed */
 }
 
 .slider__poster-frame:hover {
     border-color: rgba(255, 255, 255, 0.5);
-    /* background: rgba(255, 255, 255, 0.15); */
 }
 
 .slider__poster-image {
@@ -92,6 +77,8 @@
     height: 130px;
     border-radius: 8px;
     background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .slider__right {
@@ -107,7 +94,25 @@
     max-width: 550px;
 }
 
+.slider__title {
+    font-size: 3.2rem;
+    font-weight: 900;
+    margin: 0 0 8px 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.1;
+}
 
+.slider__subtitle {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0 0 16px 0;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
 
 .slider__meta {
     display: flex;
@@ -138,8 +143,6 @@
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-
-
 }
 
 .slider__genres {
@@ -169,7 +172,6 @@
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
     display: -webkit-box;
     -webkit-line-clamp: 3;
-    line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-align: left;
@@ -300,20 +302,34 @@
     right: 20px;
 }
 
-@media (max-width: 1200px) {
+/* Large Desktop (1200px - 1399px) */
+@media (max-width: 1399px) and (min-width: 1200px) {
     .slider__content {
-        padding: 45px;
+        padding: 50px 45px;
         gap: 35px;
+    }
+
+    .slider__poster-image {
+        width: 450px;
+        height: 120px;
     }
 
     .slider__info {
         max-width: 500px;
     }
-    
+
+    .slider__title {
+        font-size: 3rem;
+    }
+
+    .slider__subtitle {
+        font-size: 1.2rem;
+    }
+
     .slider__description {
         font-size: 14px;
     }
-    
+
     .slider__bottom {
         bottom: 25px;
         left: 45px;
@@ -321,7 +337,8 @@
     }
 }
 
-@media (max-width: 1024px) {
+/* Desktop (1024px - 1199px) */
+@media (max-width: 1199px) and (min-width: 1024px) {
     .slider__content {
         padding: 40px;
         gap: 30px;
@@ -331,18 +348,115 @@
         width: 400px;
         height: 110px;
     }
-    
+
     .slider__info {
         max-width: 450px;
     }
-    
+
+    .slider__title {
+        font-size: 2.8rem;
+    }
+
+    .slider__subtitle {
+        font-size: 1.1rem;
+    }
+
     .slider__arrow {
         width: 40px;
         height: 40px;
     }
+
+    .slider__bottom {
+        left: 40px;
+        right: 40px;
+    }
 }
 
-@media (max-width: 768px) {
+/* Tablet Landscape (768px - 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+    .slider {
+        height: 70vh;
+        min-height: 500px;
+    }
+
+    .slider__content {
+        padding: 35px 30px;
+        gap: 25px;
+        top: 8%;
+    }
+
+    .slider__poster-image {
+        width: 350px;
+        height: 95px;
+    }
+
+    .slider__title {
+        font-size: 2.5rem;
+    }
+
+    .slider__subtitle {
+        font-size: 1rem;
+    }
+
+    .slider__info {
+        max-width: 400px;
+    }
+
+    .slider__description {
+        font-size: 14px;
+        -webkit-line-clamp: 3;
+    }
+
+    .slider__meta {
+        gap: 12px;
+    }
+
+    .slider__rating,
+    .slider__year,
+    .slider__duration {
+        font-size: 12px;
+        padding: 3px 8px;
+    }
+
+    .slider__genre {
+        font-size: 11px;
+        padding: 3px 8px;
+    }
+
+    .slider__actions {
+        gap: 10px;
+    }
+
+    .slider__play-btn,
+    .slider__favorite-btn,
+    .slider__bookmark-btn {
+        width: 38px;
+        height: 38px;
+    }
+
+    .slider__bottom {
+        bottom: 20px;
+        left: 30px;
+        right: 30px;
+    }
+
+    .slider__arrow {
+        width: 36px;
+        height: 36px;
+        left: 15px;
+    }
+
+    .slider__arrow--next {
+        right: 15px;
+    }
+
+    .slider__question {
+        font-size: 14px;
+    }
+}
+
+/* Tablet Portrait (600px - 767px) */
+@media (max-width: 767px) and (min-width: 600px) {
     .slider {
         height: 60vh;
         min-height: 450px;
@@ -351,22 +465,51 @@
     .slider__content {
         flex-direction: column;
         text-align: center;
-        padding: 30px 20px;
+        padding: 30px 25px;
         gap: 20px;
         justify-content: center;
+        top: 5%;
+    }
+
+    .slider__poster-image {
+        width: 300px;
+        height: 80px;
+        margin: 0 auto;
     }
 
     .slider__title {
         font-size: 2.2rem;
     }
 
-    .slider__poster-frame {
-        width: 160px;
-        height: 220px;
+    .slider__subtitle {
+        font-size: 1rem;
+        margin-bottom: 12px;
     }
 
     .slider__info {
         max-width: 100%;
+    }
+
+    .slider__meta {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .slider__genres {
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    .slider__description {
+        -webkit-line-clamp: 2;
+        font-size: 13px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .slider__actions {
+        justify-content: center;
+        gap: 10px;
     }
 
     .slider__bottom {
@@ -376,28 +519,449 @@
         right: auto;
         margin-top: 20px;
         padding: 0 20px;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .slider__arrow {
+        width: 32px;
+        height: 32px;
+    }
+
+    .slider__arrow--prev {
+        left: 10px;
+    }
+
+    .slider__arrow--next {
+        right: 10px;
+    }
+}
+
+/* Mobile Large (480px - 599px) */
+@media (max-width: 599px) and (min-width: 480px) {
+    .slider {
+        height: 55vh;
+        min-height: 400px;
+    }
+
+    .slider__content {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px 20px;
+        gap: 18px;
+        justify-content: center;
+        top: 3%;
+    }
+
+    .slider__poster-image {
+        width: 250px;
+        height: 70px;
+        margin: 0 auto;
+    }
+
+    .slider__title {
+        font-size: 1.9rem;
+    }
+
+    .slider__subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+
+    .slider__meta {
+        justify-content: center;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .slider__rating,
+    .slider__year,
+    .slider__duration {
+        font-size: 11px;
+        padding: 2px 6px;
+    }
+
+    .slider__genres {
+        justify-content: center;
+        gap: 4px;
+        margin-bottom: 12px;
+    }
+
+    .slider__genre {
+        font-size: 10px;
+        padding: 2px 6px;
     }
 
     .slider__description {
         -webkit-line-clamp: 2;
-        line-clamp: 2;
+        font-size: 12px;
+        line-height: 1.4;
+        margin-bottom: 18px;
+    }
+
+    .slider__actions {
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .slider__play-btn,
+    .slider__favorite-btn,
+    .slider__bookmark-btn {
+        width: 36px;
+        height: 36px;
+    }
+
+    .slider__bottom {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        margin-top: 15px;
+        padding: 0 15px;
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .slider__question {
+        font-size: 13px;
+    }
+
+    .slider__dots {
+        gap: 6px;
+    }
+
+    .slider__dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    .slider__arrow {
+        width: 30px;
+        height: 30px;
+    }
+
+    .slider__arrow--prev {
+        left: 8px;
+    }
+
+    .slider__arrow--next {
+        right: 8px;
     }
 }
 
-@media (max-width: 480px) {
+/* Mobile Medium (320px - 479px) */
+@media (max-width: 479px) {
+    .slider {
+        height: 50vh;
+        min-height: 350px;
+    }
+
     .slider__content {
+        flex-direction: column;
+        text-align: center;
         padding: 20px 15px;
+        gap: 15px;
+        justify-content: center;
+        top: 5%;
+        /* Tăng top để căn giữa tốt hơn */
+    }
+
+    /* Ẩn poster image */
+    .slider__poster-image {
+        display: none;
+    }
+
+    /* Điều chỉnh info để chiếm toàn bộ không gian */
+    .slider__info {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .slider__title {
+        font-size: 1.8rem;
+        /* Tăng size cho đẹp hơn */
+        line-height: 1.2;
+        margin-bottom: 10px;
+        /* Tăng margin */
+    }
+
+    .slider__subtitle {
+        font-size: 0.9rem;
+        /* Tăng size subtitle */
+        margin-bottom: 12px;
+        /* Tăng margin */
+        color: rgba(255, 255, 255, 0.85);
+    }
+
+    .slider__meta {
+        justify-content: center;
+        gap: 8px;
+        /* Tăng gap */
+        flex-wrap: wrap;
+        margin-bottom: 14px;
+        /* Tăng margin */
+    }
+
+    .slider__rating,
+    .slider__year,
+    .slider__duration {
+        font-size: 11px;
+        /* Tăng size */
+        padding: 3px 8px;
+        /* Tăng padding */
+    }
+
+    .slider__genres {
+        justify-content: center;
+        gap: 6px;
+        /* Tăng gap */
+        margin-bottom: 16px;
+        /* Tăng margin */
+    }
+
+    .slider__genre {
+        font-size: 10px;
+        /* Tăng size */
+        padding: 4px 8px;
+        /* Tăng padding */
+    }
+
+    .slider__description {
+        -webkit-line-clamp: 3;
+        /* Hiển thị 3 dòng thay vì 2 */
+        font-size: 12px;
+        /* Tăng size */
+        line-height: 1.4;
+        margin-bottom: 20px;
+        /* Tăng margin */
+        max-width: 90%;
+        /* Giới hạn width cho đẹp */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .slider__actions {
+        justify-content: center;
+        gap: 10px;
+        /* Tăng gap */
+    }
+
+    .slider__play-btn,
+    .slider__favorite-btn,
+    .slider__bookmark-btn {
+        width: 36px;
+        /* Tăng size */
+        height: 36px;
+    }
+
+    .slider__bottom {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        margin-top: 20px;
+        /* Tăng margin */
+        padding: 0 15px;
+        flex-direction: column;
+        gap: 15px;
+        /* Tăng gap */
+        text-align: center;
+    }
+
+    .slider__question {
+        font-size: 13px;
+        /* Tăng size */
+    }
+
+    .slider__dots {
+        gap: 6px;
+    }
+
+    .slider__dot {
+        width: 8px;
+        /* Tăng size */
+        height: 8px;
+    }
+
+    .slider__arrow {
+        width: 28px;
+        height: 28px;
+        display: none;
+    }
+}
+
+/* Extra Small Mobile (< 320px) */
+@media (max-width: 319px) {
+    .slider {
+        height: 45vh;
+        min-height: 300px;
+    }
+
+    .slider__content {
+        padding: 15px 10px;
+        gap: 12px;
+        top: 8%;
+        /* Căn giữa tốt hơn */
+    }
+
+    /* Ẩn poster image */
+    .slider__poster-image {
+        display: none;
+    }
+
+    .slider__info {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .slider__title {
+        font-size: 1.5rem;
+        /* Tăng size */
+        margin-bottom: 8px;
+    }
+
+    .slider__subtitle {
+        font-size: 0.8rem;
+        /* Tăng size */
+        margin-bottom: 10px;
+    }
+
+    .slider__meta {
+        margin-bottom: 12px;
+        gap: 6px;
+    }
+
+    .slider__genres {
+        margin-bottom: 14px;
+        gap: 4px;
+    }
+
+    .slider__description {
+        font-size: 11px;
+        /* Tăng size */
+        -webkit-line-clamp: 2;
+        margin-bottom: 18px;
+        max-width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .slider__actions {
+        gap: 8px;
+    }
+
+    .slider__play-btn,
+    .slider__favorite-btn,
+    .slider__bookmark-btn {
+        width: 32px;
+        /* Tăng size */
+        height: 32px;
+    }
+
+    .slider__bottom {
+        margin-top: 15px;
+        /* Tăng margin */
+        gap: 12px;
+    }
+
+    .slider__question {
+        font-size: 12px;
+    }
+
+    .slider__arrow {
+        display: none;
+    }
+}
+
+/* Điều chỉnh cho Mobile Large cũng ẩn poster nếu cần */
+@media (max-width: 599px) and (min-width: 480px) {
+    .slider__poster-image {
+        display: none;
+        /* Ẩn cả mobile large */
+    }
+
+    .slider__content {
+        top: 8%;
+        /* Căn giữa tốt hơn */
+        gap: 20px;
+    }
+
+    .slider__info {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .slider__title {
+        font-size: 2rem;
+        /* Tăng size khi không có poster */
+    }
+
+    .slider__subtitle {
+        font-size: 1rem;
+        /* Tăng size */
+        margin-bottom: 12px;
+    }
+
+    .slider__description {
+        -webkit-line-clamp: 3;
+        /* Hiển thị 3 dòng */
+        font-size: 13px;
+        /* Tăng size */
+        margin-bottom: 20px;
+        max-width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .slider__actions {
+        gap: 12px;
+        /* Tăng gap */
+    }
+
+    .slider__play-btn,
+    .slider__favorite-btn,
+    .slider__bookmark-btn {
+        width: 40px;
+        /* Tăng size */
+        height: 40px;
+    }
+}
+
+/* Landscape orientation - ẩn poster */
+@media (max-height: 500px) and (orientation: landscape) and (max-width: 767px) {
+    .slider__poster-image {
+        display: none;
+    }
+
+    .slider__content {
+        flex-direction: row;
+        /* Layout ngang cho landscape */
+        text-align: left;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .slider__info {
+        max-width: 80%;
     }
 
     .slider__title {
         font-size: 1.8rem;
     }
 
-    .slider__meta {
-        justify-content: center;
+    .slider__description {
+        -webkit-line-clamp: 2;
     }
 
-    .slider__actions {
-        justify-content: center;
+    .slider__bottom {
+        position: absolute;
+        bottom: 10px;
+        left: 20px;
+        right: 20px;
+        flex-direction: row;
+        margin-top: 0;
     }
 }
