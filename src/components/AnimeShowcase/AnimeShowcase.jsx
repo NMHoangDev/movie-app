@@ -74,9 +74,12 @@ const AnimeShowcase = ({
           <p className="anime-showcase__subtitle-en">{subtitleEn}</p>
 
           <div className="anime-showcase__meta">
-            <span className="anime-showcase__rating">⭐ 8.6</span>
+            <span className="anime-showcase__imdb">
+              <span className="anime-showcase__imdb-text">IMBd</span> 8.6
+            </span>
             <span className="anime-showcase__badge">T13</span>
-            <span className="anime-showcase__time">23 Tập</span>
+            <span className="anime-showcase__time">2025</span>
+            <span className="anime-showcase__time">2h 10p</span>
           </div>
 
           <div className="anime-showcase__tags">
