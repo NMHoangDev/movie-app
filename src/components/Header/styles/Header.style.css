@@ -104,7 +104,7 @@
         padding: 0 18px 12px 18px;
         height: 65px;
     }
-    
+
     .header__container {
         min-height: 65px;
         gap: 12px;
@@ -134,7 +134,7 @@
         flex-direction: row;
         align-items: center;
     }
-    
+
     .header__nav-wrapper {
         order: 3;
         flex: 1;
@@ -147,6 +147,9 @@
 @media (max-width: 768px) {
     .header__burger {
         display: block;
+        position: absolute;
+        right: 8px;
+        top: 0px;
     }
 
     .header__container {
@@ -186,27 +189,37 @@
     .header {
         padding: 8px 12px;
         height: 56px;
+        display: flex;
+        justify-content: center;
+
     }
-    
+
     .header__container {
         min-height: 56px;
         gap: 8px;
+        position: relative;
     }
 
     .header__nav-wrapper {
         padding: 0;
     }
-    
+
     .header__burger {
+
+
         width: 36px;
         height: 36px;
+        position: absolute;
+        top: 6px;
+        right: 12px;
     }
-    
+
     .header__burger-line {
         left: 8px;
         right: 8px;
+
     }
-    
+
     .header__burger-line:nth-child(1) {
         top: 10px;
     }
